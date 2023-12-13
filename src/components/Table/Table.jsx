@@ -171,6 +171,9 @@ const CustomTable = ({viajesData, setViajesData}) => {
             marginBottom: "16px",
             fontFamily: "CircularSTD",
             background: "#3B4ddf", //3B4d 
+
+
+
             
           }}
         >
