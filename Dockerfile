@@ -14,7 +14,7 @@ RUN npm install
 RUN apk --no-cache add openjdk11-jre
 ENV SONAR_SCANNER_VERSION 4.6.2.2472
 RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux.zip && \
-    unzip sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux.zip && \
+    unzip -a sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux.zip && \
     rm sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux.zip
 ENV PATH="/app/sonar-scanner-$SONAR_SCANNER_VERSION-linux/bin:${PATH}"
 
