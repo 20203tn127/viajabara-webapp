@@ -14,4 +14,4 @@ ENV PORT 3030
 # Exponer el puerto
 EXPOSE $PORT
 
-CMD ["npm", "start"]
+CMD ["npm", "start", "--", "--port", "$PORT"]
