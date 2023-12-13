@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Conductores from './screens/Conductores/Conductores';
 import Unidades from './screens/Unidades/Unidades';
 import Login from './screens/Login/Login';
@@ -14,6 +14,8 @@ import ConductoresEdit from './screens/Conductores/Subscreens/ConductoresEdit';
 function App() {
   return (
     <Routes>
+      <Route path="/logout" element={<Login />} />
+      <Route path="/" element={<Navigate to="/logout" />} />
       <Route path="/viajes" element={<Viajes />} />
       <Route path="/viajesRegister" element={<ViajesRegisterAndEdit isNew={true} />} />
       <Route path="/viajesRegister/:idViaje" element={<ViajesRegisterAndEdit isNew={false} />} />
@@ -24,7 +26,6 @@ function App() {
       <Route path='/conductoresEdit' element={<ConductoresEdit />}></Route>
       <Route path="/unidades" element={<Unidades />} />
       <Route path='/unidadesEdit' element={<UnidadesEdit />} />
-      <Route path="/logout" element={<Login />} />
     </Routes>
   );
 }
