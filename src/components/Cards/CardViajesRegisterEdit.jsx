@@ -74,14 +74,37 @@ const CardViajesRegisterEdit = ({nuevoViajeData,setNuevoViajeData, selectedRowKe
             <Card className="cardsita" title="Información general del viaje" style={{ height: "100%" }}>
               <Row style={{ marginBottom: "20px", justifyContent: "" }}>
                 <EnvironmentOutlined style={{ fontSize: "24px", color: "#FB1506", marginRight: "10px" }} />
-                <Meta title="Punto de Origen" description={viajeData ? viajeData.ruta.paradas[0].nombre : "Sin asignar"} style={{ marginRight: "25px" }} />
+                <Meta
+                  title={<span style={{ color: "black" }}>Punto de Origen <span style={{ color: "red" }}>*</span></span>}
+                  description={viajeData ? viajeData.ruta.paradas[0].nombre : "Sin asignar"}
+                  style={{ marginRight: "25px" }}
+                />
+
+
                 <EnvironmentOutlined style={{ fontSize: "24px", color: "#FB1506", marginRight: "10px" }} />
-                <Meta title="Punto de Destino" description={viajeData ? viajeData.ruta.paradas.slice(-1)[0].nombre : "Sin asignar"} />
+                <Meta
+                  title={
+                    <span>
+                      Punto de Destino{" "}
+                      <span style={{ color: "red" }}>*</span>
+                    </span>
+                  }
+                  description={viajeData ? viajeData.ruta.paradas.slice(-1)[0].nombre : "Sin asignar"}
+                />
+
               </Row>
               <Row style={{ marginBottom: "18px" }}>
                 <FileTextOutlined style={{ fontSize: "24px", color: "#FB1506", marginBottom: "10px" }} />
 
-                <Meta title="Nombre del viaje" style={{ marginLeft: "10px" }} />
+                <Meta
+                  title={
+                    <span style={{ marginLeft: "10px" }}>
+                      Nombre del viaje{" "}
+                      <span style={{ color: "red" }}>*</span>
+                    </span>
+                  }
+                />
+
                 <Field
                   type="text"
                   name="nombreViaje"
@@ -98,7 +121,15 @@ const CardViajesRegisterEdit = ({nuevoViajeData,setNuevoViajeData, selectedRowKe
 
               <Row style={{ marginBottom: "18px" }}>
                 <FieldTimeOutlined style={{ fontSize: "24px", color: "#FB1506", marginBottom: "10px" }} />
-                <Meta title="Hora del viaje" style={{ marginLeft: "10px" }} />
+                <Meta
+                  title={
+                    <span style={{ marginLeft: "10px" }}>
+                      Hora del viaje{" "}
+                      <span style={{ color: "red" }}>*</span>
+                    </span>
+                  }
+                />
+
                 <Field
                   type="text"
                   name="horaViaje"
@@ -115,7 +146,15 @@ const CardViajesRegisterEdit = ({nuevoViajeData,setNuevoViajeData, selectedRowKe
 
               <Row style={{marginTop:"20px"}}>
                 <CalendarOutlined style={{ fontSize: "24px", color: "#FB1506", marginBottom: "10px" }} />
-                <Meta title="Fecha de Viaje" style={{ marginLeft: "10px" }} />
+                <Meta
+                title={
+                  <span style={{ marginLeft: "10px" }}>
+                    Fecha de Viaje{" "}
+                    <span style={{ color: "red" }}>*</span>
+                  </span>
+                }
+              />
+
                 <ConfigProvider locale={es}>
                   <DatePicker style={{ width: "100%" }} value={viajeData && viajeData.fechaViaje && !onChangedDate ? dayjs(viajeData.fechaViaje, "YYYY-MM-DD") : undefined} 
                   onChange={(value) => {
@@ -135,7 +174,15 @@ const CardViajesRegisterEdit = ({nuevoViajeData,setNuevoViajeData, selectedRowKe
                 <Col style={{ marginRight: "110px", marginLeft: "30px" }}>
                   <Row>
                     <UserOutlined style={{ fontSize: "24px", color: "#FB1506", marginRight: "10px" }} />
-                    <Meta title="Conductor asignado" style={{ marginRight: "25px" }} />
+                    <Meta
+                      title={
+                        <span style={{ marginRight: "25px" }}>
+                          Conductor asignado{" "}
+                          <span style={{ color: "red" }}>*</span>
+                        </span>
+                      }
+                    />
+
                   </Row>
 
                   <Field
@@ -163,7 +210,15 @@ const CardViajesRegisterEdit = ({nuevoViajeData,setNuevoViajeData, selectedRowKe
                 <Col>
                   <Row>
                     <CarOutlined style={{ fontSize: "24px", color: "#FB1506", marginRight: "10px" }} />
-                    <Meta title="Unidad asignada" style={{ marginRight: "25px" }} />
+                    <Meta
+                      title={
+                        <span style={{ marginRight: "25px" }}>
+                          Unidad asignada{" "}
+                          <span style={{ color: "red" }}>*</span>
+                        </span>
+                      }
+                    />
+
                   </Row>
                   <Field
                     as={Select}
