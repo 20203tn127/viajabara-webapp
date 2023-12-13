@@ -38,7 +38,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sonar-scanner": "sonar-scanner -Dsonar.projectKey=viajabara_frontend -Dsonar.sources=. -Dsonar.host.url=http://44.193.57.107:9000 -Dsonar.login=sqp_54b1baf6c6ce00fbb1a4dc1f97d409d44ac82dc3"
   },
   "eslintConfig": {
     "extends": [
