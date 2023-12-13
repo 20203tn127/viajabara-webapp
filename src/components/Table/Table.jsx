@@ -170,7 +170,7 @@ const CustomTable = ({viajesData, setViajesData}) => {
           style={{
             marginBottom: "16px",
             fontFamily: "CircularSTD",
-            background: "#3B4276",
+            background: "#3B4d", //3B4d
           }}
         >
           Añadir viaje
