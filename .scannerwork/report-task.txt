@@ -1,0 +1,6 @@
+projectKey=viajabara_frontend
+serverUrl=http://44.193.57.107:9000
+serverVersion=10.3.0.82913
+dashboardUrl=http://44.193.57.107:9000/dashboard?id=viajabara_frontend
+ceTaskId=AYxlpcsD2H9yWeCnrA5V
+ceTaskUrl=http://44.193.57.107:9000/api/ce/task?id=AYxlpcsD2H9yWeCnrA5V
